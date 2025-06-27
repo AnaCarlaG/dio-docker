@@ -32,7 +32,7 @@ Tudo isso com um único comando: `docker-compose up`.
 ```
 .
 ├── docker-compose.yml # Arquivo de configuração do Docker Compose
-└── site # Diretório com os arquivos estáticos do site
+└── website # Diretório com os arquivos estáticos do site
 ├── index.html # Página principal
 └── style.css # Estilo da página
 ```
@@ -47,7 +47,7 @@ services:
     image: httpd:latest
     container_name: my-apache-app
     ports:
-      - '80:80'
+      - '8080:80'
     volumes:
       - ./site:/usr/local/apache2/htdocs
 ```
